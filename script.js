@@ -4,7 +4,7 @@ const startDate = new Date('2025-12-01');
 // - Set `MANUAL_TODAY` to a 'YYYY-MM-DD' string to force the page to treat that day as today.
 // - Set to `null` to disable manual override and allow URL override (`?today=`) or the device date.
 // Example: const MANUAL_TODAY = '2025-12-04';
-const MANUAL_TODAY = ('2025-12-01'); // <-- set a YYYY-MM-DD string here for manual testing
+const MANUAL_TODAY = null; // <-- set a YYYY-MM-DD string here for manual testing
 
 // Determine "today" value: manual override > URL `?today=` > device date
 let today = new Date();
