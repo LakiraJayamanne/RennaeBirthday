@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Her Birthday Site</title>
+  <!-- Fonts for header and tagline -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <!-- site-wide decorative hearts (behind all content) -->
+  <div class="site-bg-hearts" aria-hidden="true">
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+    <span class="site-heart"></span>
+  </div>
+
+  <section class="intro">
+    <h1>Happy Birthday 🎉</h1>
+    <p class="tagline">Play the music while u scroll and read</p>
+    <p class="tagline">(It's for dramatic effect)</p>
+    <!-- intro content (hearts are now site-wide behind everything) -->
+  </section>
+
+  <!-- Song Section -->
+  <section class="song-of-the-day">
+    <img class="song-cover" src="" alt="Cover" />
+    <div class="song-info">
+      <p class="song-title"></p>
+      <p class="song-artist"></p>
+    </div>
+    <button id="play-pause">►</button>
+    <audio id="audio-player"></audio>
+  </section>
+
+  <!-- Daily Sections -->
+  <section class="gallery">
+    <p>Open the folder</p>
+    <div class="day" id="day1">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>Day 1 Throwback</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid">
+          <img src="pictures/side-eye.JPG" alt="Memory 1">
+          <img src="pictures/repoop.JPG" alt="Memory 2">
+          <img src="pictures/phone.JPG" alt="Memory 3">
+          <img src="pictures/Walpaper.png" alt="Memory 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="day" id="day2">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>Day 2 Throwback</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid custom-layout-day2">
+          <div class="landscape-stack">
+            <img class="landscape" src="pictures/physics.png" alt="Memory 5">
+            <img class="landscape" src="pictures/mog.JPG" alt="Memory 6">
+          </div>
+          <img class="portrait" src="pictures/ur-mine.JPG" alt="Memory 7">
+          <img class="portrait" src="pictures/Smooch.png" alt="Memory 8">
+        </div>
+      </div>
+    </div>
+
+    <div class="day" id="day3">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>Day 3 Throwback</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid">
+          <img class="portrait" src="pictures/grumpy-selfie.jpg" alt="Memory 8">
+          <img class="portrait" src="pictures/freakatron.png" alt="Memory 9">
+          <img class="portrait" src="pictures/furry.JPG" alt="Memory 10">
+          <img class="portrait" src="pictures/Spidey.png" alt="Memory 11">
+        </div>
+      </div>
+    </div>
+
+    <div class="day" id="day4">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>BIRTHDAY THROWBACK!!!</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid">
+          <img class="portrait" src="pictures/minecraft.png" alt="Memory 19">
+          <img class="portrait" src="pictures/prom.JPG" alt="Memory 20">
+          <img class="portrait" src="pictures/kaneki.png" alt="Memory 21">
+          <img class="portrait" src="pictures/egg.png" alt="Memory 22">
+          <img class="portrait" src="pictures/dessert.png" alt="Memory 23">
+          <img class="portrait" src="pictures/train.png" alt="Memory 24">
+          <img class="portrait" src="pictures/facetime1.png" alt="Memory 25">
+          <img class="portrait" src="pictures/Heart.png" alt="Memory 26">
+        </div>
+      </div>
+    </div>
+
+    <div class="day" id="day5">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>Day 5 Throwback</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid">
+          <img class="portrait" src="pictures/no.jpg" alt="Memory 13">
+          <img class="portrait" src="pictures/facetime3.png" alt="Memory 14">
+          <img class="portrait" src="pictures/slay.png" alt="Memory 15">
+          <img class="portrait" src="pictures/Shhh.png" alt="Memory 16">
+        </div>
+      </div>
+    </div>
+
+    <div class="day" id="day6">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>Day 6 Throwback</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid custom-layout-day6">
+          <div class="landscape-stack">
+            <img src="pictures/facetime2.png" alt="Memory 16">
+            <img src="pictures/angel1.png" alt="Memory 17">
+            <img src="pictures/Daal.png" alt="Memory 19">
+          </div>
+          <img class="portrait" src="pictures/hello-kitty.JPG" alt="Memory 18">
+        </div>
+      </div>
+    </div>
+
+    <div class="day" id="day7">
+      <div class="folder-header" onclick="toggleFolder(this)">
+        <h3>Day 7 Throwback</h3>
+        <div class="folder-icon"></div>
+      </div>
+      <div class="folder-content">
+        <div class="photo-grid">
+          <img class="portrait" src="pictures/hair-heart.png" alt="Memory 10">
+          <img class="portrait" src="pictures/xo.jpg" alt="Memory 11">
+          <img class="portrait" src="pictures/spiderman.jpg" alt="Memory 12">
+          <img class="portrait" src="pictures/Shitting.png" alt="Memory 13">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cake-section">
+    <h2>🎂 Your Birthday Cake 🎂</h2>
+    <p>Click on the cake to add candles!</p>
+    <p id="candle-counter">Candles: 0 / 19</p>
+    <div class="cake-container" id="cake-container">
+      <img id="cake" src="cake/cake.png" alt="Cake" />
+    </div>
+  </section>
+
+
+<!-- ENVELOPE HTML BLOCK -->
+<section class="message-section">
+  <div class="envelope-container" id="envelope-container">
+    <div id="daily-message-box" class="message-box">
+      <h2 id="message-title">Today's Message</h2>
+      <div id="daily-message" class="message-content">
+        <!-- populated from script.js -->
+      </div>
+      <div class="message-footer">
+        <small class="message-day">Day <span id="message-day">-</span></small>
+      </div>
+    </div>
+    <!-- envelope removed per user request -->
+  </div>
+</section>
+
+  <!-- envelope interaction handled in external script.js -->
+
+
+
+<p>U cant open the gift till ur birthday silly</p>
+
+<!-- GIFT BOX - 100 Reasons Section -->
+<section class="gift-section">
+  <div class="gift-wrapper">
+    <div id="gift-box" class="gift-box closed" role="button" tabindex="0" aria-pressed="false">
+      <!-- use user-provided PNG for the gift box visual -->
+      <img src="cake/gift.png" alt="Gift" class="gift-img" />
+
+      <!-- reasons panel initially hidden INSIDE the gift box -->
+      <div id="reasons-panel" class="reasons-panel" aria-hidden="true">
+        <div class="reasons-header centered">
+          <h2 class="reasons-title">100 Reasons Why<br>I Love You</h2>
+        </div>
+        <ol id="reasons-list" class="reasons-list"></ol>
+        <p>I love you so much Rennae. Wish I coulda put 1000 reasons here but I think these will do for now :). ALSO, since I cant get u the gift ordered to your house 🙄 , I'll get it for u when I see you next time. Hope u have an amazing birthday week my love ❤️.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Reasons modal (appears after 3 presses) -->
+  <div id="reasons-modal" class="reasons-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+      <div class="modal-content" role="dialog" aria-modal="true">
+      <button id="reasons-close" class="modal-close" aria-label="Close">✖</button>
+      <h2 class="reasons-title">100 Reasons Why<br>I Love You</h2>
+      <div class="modal-body">
+        <ol id="modal-reasons-list" class="reasons-list"></ol>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
